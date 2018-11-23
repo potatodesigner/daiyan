@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>待眼</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/js.css">
+	<style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .logo{
+      position: absolute;
+      width:50%; height:50%;
+      top: 380px;
+      left: 125px;
+      right: 75px;
+    }
+    .xuanzhe{ width:80%; height:80%;
+      position: absolute; top: 30px
+ } 
+    .bt{ width:80%; height:80%;
+      position: absolute; top: 30px
+    } 
+    #jiaru{color: black;}
+    #jiaru:hover{color: #5ec1f9;}
+    .jiarud{ 
+    	position:absolute; 
+    	z-index: 5; 
+    	right: 20px; 
+    	top: 20px; 
+    	font-weight:lighter; 
+    	font-size: 1.0em;
+    }
+    #logoz{position: absolute;
+      z-index: 5;
+      left: 100px;
+      top: 10px;
+  -webkit-transform: translate(-70%, 0);
+    -moz-transform: translate(-70%, 0);
+    -ms-transform: translate(-70%, 0);
+  transform: translate(-70%, 0);
+  margin-left: 0;
+    }
+    #logo{background-image: url(background/logo.png);}
+    #image2 {background-image: url(background/image2.png);}
+    #image3 {background-image: url(background/image3.png);}
+    #download {background-image: url(background/downloadbg.png);}
+    #download-button {z-index: 1; position:relative; bottom:-200px;}
+    #zi1{
+      position: absolute;
+      z-index: 6;
+      -webkit-transform: translate(0%, 0);
+    -moz-transform: translate(0%, 0);
+    -ms-transform: translate(0%, 0);
+  transform: translate(0%, 0);
+  bottom: 70px;
+
+    }
+    a {text-decoration: none}
+  </style>
+<script src="./js/lottie.js"></script>
+</head>
+
+
+<body>
+  <div>
+            <div class="jiarud"><a href="http://www.baidu.com" target＝_blank id="jiaru">加入待眼</a></div>
+        <img id="logoz" src="./logo/logoz.png">
+  </div>
+<!--分页-->
+ <div class="swiper-container">
+    <div class="swiper-wrapper">
+    	<!--logo-->
+      <div class="swiper-slide" class="logo" id="logo">
+      	<div class="logo"></div>
+      </div>
+      <!--动画1-->
+      <div class="swiper-slide" id="image2">
+      	<div class="xuanzhe"></div>
+        <img id="zi1" src="zi/4.png">
+
+      </div>
+      <!--动画2-->
+      <div class="swiper-slide" id="image3">
+      	<div class="bt"></div>
+        <img id="zi1" src="zi/3.png">
+      </div>
+      <div class="swiper-slide" id="download">
+      
+        <a href="http://www.baidu.com" target＝_blank><img id="download-button" src="download/1.png"></a>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+<!-- logo -->
+
+<script src="./lottie.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+ var logo = document.querySelector('.logo');
+ lottie.loadAnimation({
+       container: logo,   //包含动画的DOM元素
+       renderer: 'svg',  
+       loop: true, 
+       autoplay: true, 
+       path: './logo/logo.json',   //动画的路径
+ })
+</script>
+<script>
+ var xuanzhe = document.querySelector('.xuanzhe');
+ lottie.loadAnimation({
+       container: xuanzhe,   //包含动画的DOM元素
+       renderer: 'svg',  
+       loop: true, 
+       autoplay: true, 
+       path: './xuanzhe/xuanzhe.json',   //动画的路径
+ })
+</script>
+<script>
+ var bt = document.querySelector('.bt');
+ lottie.loadAnimation({
+       container: bt,   //包含动画的DOM元素
+       renderer: 'svg',  
+       loop: true, 
+       autoplay: true, 
+       path: './bt/bt.json',   //动画的路径
+ })
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      mousewheel: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        loadOnTransitionStart: true,
+        parallax: true,
+      },
+    });
+    
+  </script>
+  <script type="text/javascript">
+        window.onload = function () {
+            var img = document.getElementById("download-button");
+ 
+            img.onmouseover = function () {
+                this.src = "download/2.png"
+            }
+ 
+            img.onmouseout = function () {
+                this.src = "download/1.png";
+            }
+        }
+      </script>

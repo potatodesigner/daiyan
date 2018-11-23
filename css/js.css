@@ -1,0 +1,8 @@
+.mobile {
+	position: absolute;
+    height: 700px;
+    bottom: -94px;
+	left: 50%;
+	margin-left: -443px;
+	z-index: 9;
+}
